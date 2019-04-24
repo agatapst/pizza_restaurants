@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('pizzerias');
+  this.route('restaurants', function() {});
 });
 
 export default Router;

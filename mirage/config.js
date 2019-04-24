@@ -3,13 +3,13 @@ export default function() {
 
   this.namespace = '/api';
 
-  this.get('/pizzeria', function() {
+  this.get('/restaurants', function() {
     return {
       data: [{
-        type: 'pizzerias',
-        id: 'roma-pizzeria',
+        type: 'restaurants',
+        id: 'roma-restaurant',
         attributes: {
-          name: 'Roma Pizzeria',
+          name: 'Roma Restaurant',
           address: 'Via Tiburtina 5, Roma',
           city: 'Rome',
           hours: '1 PM - 10 PM',
@@ -18,8 +18,8 @@ export default function() {
           description: "This grand old mansion with delicious pizza."
         }
       }, {
-        type: 'pizzerias',
-        id: 'napoli-pizzeria',
+        type: 'restaurants',
+        id: 'napoli-restaurant',
         attributes: {
           name: 'Napoli Restaurant',
           address: 'Via Salvator Rosa 11, Naples',
@@ -30,8 +30,8 @@ export default function() {
           description: "A foodies dream."
         }
       }, {
-        type: 'pizzerias',
-        id: 'palermo-pizzeria',
+        type: 'restaurants',
+        id: 'palermo-restaurant',
         attributes: {
           name: 'Palermo Pizza Shop',
           address: 'Via Sampolo 1, Palermo',
