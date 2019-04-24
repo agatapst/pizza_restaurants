@@ -1,0 +1,31 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome!</h2>
+  <p>Enjoy your pizza</p>
+</div>
+
+{{#each this.model as |pizzeria|}}
+  <article class="listing">
+    <div class="details">
+      <h3>{{pizzeria.name}}</h3>
+      <div class="detail address">
+        <span>Address:</span> {{pizzeria.address}}
+      </div>
+      <div class="detail city">
+        <span>City:</span> {{pizzeria.city}}
+      </div>
+      <div class="detail hours">
+        <span>Open:</span> {{pizzeria.hours}}
+      </div>
+      <div class="detail menu">
+        <span>Menu:</span> 
+        <span>{{pizzeria.menu.pizzaName}}</span>
+        <span>{{pizzeria.menu.pizzaPrice}}</span>
+        <span>{{pizzeria.menu.pizzaIgredients}}</span>
+      </div>
+      <div class="detail description">
+        {{pizzeria.description}}
+      </div>
+    </div>
+  </article>
+{{/each}}
