@@ -1,0 +1,27 @@
+<div class="jumbo show-listing">
+  <h2 class="title">{{this.model.title}}</h2>
+  <div class="content">
+    <div>
+      <img src={{this.model.image}} class="restaurant-pic" alt="Picture of {{this.model.title}}">
+    </div>
+    <div class="detail-section">
+      <div class="detail owner">
+        <strong>Owner:</strong> {{this.model.address}}
+      </div>
+      <div class="detail">
+        <strong>City</strong> {{this.model.city}}
+      </div>
+      <div class="detail">
+        <strong>Hours</strong> {{this.model.hours}}
+      </div>
+      <div class="detail">
+        <strong>Menu</strong> 
+        {{#each this.model.menu as |menuItem|}}
+            <h4>{{ menuItem.pizzaName }}</h4>
+            <p>price: {{ menuItem.pizzaPrice }}</p>
+            <p>ingredients: {{ menuItem.pizzaIngredients }}</p>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
