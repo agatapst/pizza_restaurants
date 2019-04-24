@@ -1,4 +1,6 @@
 export default function() {
+  this.passthrough('https://api.mapbox.com/**');
+
   this.namespace = '/api';
 
   this.get('/pizzeria', function() {
@@ -8,7 +10,7 @@ export default function() {
         id: 'roma-pizzeria',
         attributes: {
           name: 'Roma Pizzeria',
-          address: 'Via Tiburtina 5',
+          address: 'Via Tiburtina 5, Roma',
           city: 'Rome',
           hours: '1 PM - 10 PM',
           menu: 15,
@@ -20,7 +22,7 @@ export default function() {
         id: 'napoli-pizzeria',
         attributes: {
           name: 'Napoli Restaurant',
-          address: 'Via Salvator Rosa 11',
+          address: 'Via Salvator Rosa 11, Naples',
           city: 'Naples',
           hours: '1 PM - 3 PM, 6 PM - 9 PM',
           menu: 1,
@@ -32,7 +34,7 @@ export default function() {
         id: 'palermo-pizzeria',
         attributes: {
           name: 'Palermo Pizza Shop',
-          address: 'Via Sampolo 1',
+          address: 'Via Sampolo 1, Palermo',
           city: 'Palermo',
           hours: '5 PM - 1 PM',
           bedrooms: 3,
