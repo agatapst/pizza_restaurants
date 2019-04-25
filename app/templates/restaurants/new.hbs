@@ -1,10 +1,9 @@
 <div class="container">
-    <div class="row">
+    <div class="row add-form">
           <h1>Add new restaurant</h1>
             <form {{action 'save' on="submit"}}>
                 {{input value=this.model.name placeholder="Name"}}
                 {{input value=this.model.address placeholder="Address (street, city)"}}
-                {{input value=this.model.city placeholder="City"}}
                 {{input value=this.model.hours placeholder="Hours"}}
                 {{input value=this.model.image placeholder="Image URL"}}
                 <button type="submit">Add restaurant</button>

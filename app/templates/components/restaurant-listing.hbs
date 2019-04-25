@@ -3,14 +3,14 @@
     <div class="details">
       <h3>{{#link-to "restaurants.show" restaurant class=restaurant.id}}{{this.restaurant.name}}{{/link-to}}</h3>
       <div class="detail address">
-        <span>Address:</span> {{restaurant.address}}
+        <h4>Address</h4> {{restaurant.address}}
       </div>
       <div class="detail hours">
-        <span>Open:</span> {{restaurant.hours}}
+        <h4>Opening hours</h4> {{restaurant.hours}}
       </div>
-      <div class="detail menu">
-        <span>Menu:</span> 
-        <p>{{#link-to "restaurants.show" restaurant class=restaurant.id}}Click here for details{{/link-to}}</p>
+      <div class="detail restaurantMenu">
+        <h4>Menu</h4> 
+        <button>{{#link-to "restaurants.show" restaurant class=restaurant.id}}Click here for details{{/link-to}}</button>
       </div>
     </div>
     <LocationMap @location={{this.restaurant.address}} />

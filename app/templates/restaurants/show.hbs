@@ -6,19 +6,16 @@
     </div>
     <div class="detail-section">
       <div class="detail name">
-        <h3>{{this.model.name}}</h3>
+        <h1>{{this.model.name}}</h1>
       </div>
-      <div class="detail owner">
-        <strong>Owner: </strong> {{this.model.address}}
+      <div class="detail address">
+        <strong>Address: </strong> {{this.model.address}}
       </div>
-      <div class="detail">
-        <strong>City: </strong> {{this.model.city}}
+      <div class="detail hours">
+        <strong>Opening hours: </strong> {{this.model.hours}}
       </div>
-      <div class="detail">
-        <strong>Hours: </strong> {{this.model.hours}}
-      </div>
-      <div class="detail">
-        <strong>Menu:</strong> 
+      <div class="detail restaurantMenu">
+        <h3>Menu:</h3> 
         {{#each this.model.menu as |menuItem|}}
             <h4>{{ menuItem.pizzaName }}</h4>
             <p>price: {{ menuItem.pizzaPrice }}</p>

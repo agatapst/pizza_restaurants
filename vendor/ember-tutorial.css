@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,700,700i&subset=latin-ext');
 /**
  * Base Elements
  */
@@ -19,8 +19,8 @@ p,
 div,
 span,
 a {
-  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Raleway', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 2;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 }
 
 a {
-  color: #016aba;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -40,20 +40,33 @@ p {
  * Button
  */
 
-.button {
-  padding: 10px 30px 10px;
+.details button {
+  padding: 5px;
+  margin-top: 5px;
   text-decoration: none;
-  color: #fff;
-  background: #016aba;
+  color: #ffffff;
+  background: #B7BC9D;
   border-radius: 5px;
   border: none;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: bold;
   opacity: 0.9;
   display: inline-block;
 }
 
-.button:hover {
+.add-form button {
+  padding: 10px;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+  background: #240508;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+button:hover {
   opacity: 1;
 }
 /**
@@ -74,11 +87,13 @@ p {
   height: 4em;
   background-color: #677ae4;
   background-color: #05526A;
-  background-color: #e46855;
+  background-color: #98201D;
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu h1 {
-  padding: 7px 0 0 20px;
+  padding: 10px 0;
   color: #f9f9f9;
   font-size: 1.8em;
 }
@@ -88,16 +103,12 @@ p {
   left: -12px;
 }
 
-.menu a,
-.menu .links {
-  display: inline-block;
-}
-
 .menu a {
   text-decoration: none;
-  padding: 0 15px;
+  padding: 0 10px;
+  margin: 5px;
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -110,36 +121,17 @@ p {
   padding: 0 21px;
 }
 
-.menu .links a {
-  position: relative;
-  bottom: 5px;
-}
-
-.list-filter input {
-  padding: 11px;
-  font-size: 18px;
-  width: 500px;
-  margin: 50px auto;
-  background-color: rgba(255, 255, 255, 0.75);
-  border: solid 1px lightgray;
-  display: block;
-}
-
-.menu input:focus {
-  background-color: #f9f9f9;
-  outline: none;
-}
-
 .menu button {
-  margin-right: 15px;
+  margin: 10px 15px;
   position: relative;
-  top: -1px;
+  top: -2px;
   left: -5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #262626;
+  background-color: #240508;
   cursor: pointer;
   opacity: 1;
+  outline: none;
 }
 
 .menu button:hover {
@@ -182,13 +174,19 @@ p {
   background: #f6f6f6;
 }
 
+.jumbo-header {
+  background: url(../assets/images/pizza.png);
+  height: 200px;
+}
+
 .jumbo:hover {
   background-color: #f3f3f3;
 }
 
 .jumbo h2 {
   font-size: 3.2em;
-  margin-top: -25px;
+  margin-top: -30px auto;
+  color: white;
 }
 
 .jumbo p,
@@ -222,9 +220,9 @@ p {
 }
 
 .listing img {
-  height: 100px;
+  height: 200px;
   float: left;
-  padding-right: 45px;
+  padding-right: 40px;
   border-radius: 5px;
 }
 
@@ -270,13 +268,14 @@ p {
 }
 
 .listing .map-container {
-  flex-grow:1;
-  flex: 25%;
+  flex-grow: 1;
+  flex: 55%;
 }
 
 .listing .map {
   height: 180px;
-  width: 200px;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .listing .details {
@@ -345,6 +344,24 @@ p {
   align-items: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form input {
+  font-size: 15px;
+  width: 300px;
+  margin: 15px;
+}
+
 /**
  * Utilities
  */
@@ -367,17 +384,6 @@ p {
 
 .relative {
   position: relative;
-}
-
-.tomster {
-    background: url(../assets/images/teaching.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
-
-    position: relative;
-    top: -50px;
 }
 
 .screen-reader{
