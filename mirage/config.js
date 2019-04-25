@@ -24,7 +24,7 @@ export default function() {
             pizzaIngredients: 'tomatoes, cheese, olives'
           }
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
+        image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80.jpg',
         description: "This grand old mansion with delicious pizza."
       }
     }, 
@@ -48,7 +48,7 @@ export default function() {
             pizzaIngredients: 'tomatoes, cheese, olives'
           }
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
+        image: 'https://images.unsplash.com/photo-1542834369-f10ebf06d3e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80.jpg',
         description: "A foodies dream."
       }
     }, 
@@ -72,7 +72,7 @@ export default function() {
             pizzaIngredients: 'tomatoes, cheese, olives'
           }
         ],
-        image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg',
+        image: 'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80.jpg',
         description: "Convenience is the most important."
       }
     }
@@ -84,6 +84,14 @@ export default function() {
 
   this.get('/restaurants/:id', function (db, request) {
     return { data: restaurants.find((restaurant) => request.params.id === restaurant.id) };
+  });
+
+  this.post('/restaurants', function (db, request) {
+      let newRestaurant = JSON.parse(request.requestBody).data;
+      newRestaurant.id = newRestaurant.attributes.name.toLowerCase().replace(' ', '-');
+      restaurants.push(newRestaurant);
+      console.log(newRestaurant);
+      return { data: newRestaurant }
   });
 
 }

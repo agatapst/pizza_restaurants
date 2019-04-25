@@ -5,18 +5,12 @@
       <div class="detail address">
         <span>Address:</span> {{restaurant.address}}
       </div>
-      <div class="detail city">
-        <span>City:</span> {{restaurant.city}}
-      </div>
       <div class="detail hours">
         <span>Open:</span> {{restaurant.hours}}
       </div>
       <div class="detail menu">
         <span>Menu:</span> 
         <p>{{#link-to "restaurants.show" restaurant class=restaurant.id}}Click here for details{{/link-to}}</p>
-      </div>
-      <div class="detail description">
-        {{restaurant.description}}
       </div>
     </div>
     <LocationMap @location={{this.restaurant.address}} />
