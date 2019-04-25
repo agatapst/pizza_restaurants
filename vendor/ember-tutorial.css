@@ -56,6 +56,7 @@ p {
 
 .add-form button {
   padding: 10px;
+  margin: 10px;
   text-decoration: none;
   outline: none;
   color: #ffffff;
@@ -66,6 +67,12 @@ p {
   opacity: 0.9;
   cursor: pointer;
 }
+
+.add-new-pizza {
+  background: #B7BC9D !important;
+  color: #000000 !important;
+}
+
 button:hover {
   opacity: 1;
 }

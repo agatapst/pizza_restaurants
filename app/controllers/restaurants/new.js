@@ -7,6 +7,12 @@ export default Controller.extend({
         restaurant.save().then((newRestaurant) => {
             this.transitionToRoute('restaurants');
         })
-       }
+      },
+      newPizza() {
+        let restaurant = this.get('model');
+        restaurant.menu.push({});
+        this.set('model', restaurant);
+        this.notifyPropertyChange('model');
+      }
     }
   });
