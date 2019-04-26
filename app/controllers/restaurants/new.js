@@ -4,7 +4,7 @@ export default Controller.extend({
     actions: {
       save() {
         let restaurant = this.get('model');
-        restaurant.save().then((newRestaurant) => {
+        restaurant.save().then(() => {
             this.transitionToRoute('restaurants');
         })
       },

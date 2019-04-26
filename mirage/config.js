@@ -78,7 +78,7 @@ export default function() {
     }
   ];
 
-  this.get('/restaurants', function(db, request) {
+  this.get('/restaurants', function() {
     return { data: restaurants };
   });
 
@@ -90,7 +90,6 @@ export default function() {
       let newRestaurant = JSON.parse(request.requestBody).data;
       newRestaurant.id = newRestaurant.attributes.name.toLowerCase().replace(' ', '-');
       restaurants.push(newRestaurant);
-      console.log(newRestaurant);
       return { data: newRestaurant }
   });
 

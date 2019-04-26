@@ -2,6 +2,14 @@
 /**
  * Base Elements
  */
+ :root {
+    --main-bg-color: #F3F3F3;
+    --menu-bg-color: #98201D;
+    --jumbo-bg-color: #F6F6F6;
+    --container-bg-color: #f9f9f9;
+    --main-btn-color: #B7BC9D;
+    --add-btn-color: #240508;
+  }
 
 * {
   margin: 0;
@@ -24,7 +32,7 @@ a {
 }
 
 body {
-  background: #f3f3f3;
+  background: var(--main-bg-color, grey);
 }
 
 a {
@@ -45,7 +53,7 @@ p {
   margin-top: 5px;
   text-decoration: none;
   color: #ffffff;
-  background: #B7BC9D;
+  background: var(--main-btn-color, lightgreen);
   border-radius: 5px;
   border: none;
   font-size: 12px;
@@ -60,7 +68,7 @@ p {
   text-decoration: none;
   outline: none;
   color: #ffffff;
-  background: #240508;
+  background: var(--add-btn-color, brown);
   border-radius: 5px;
   border: none;
   font-size: 15px;
@@ -69,7 +77,7 @@ p {
 }
 
 .add-new-pizza {
-  background: #B7BC9D !important;
+  background: var(--main-btn-color, lightgreen) !important;
   color: #000000 !important;
 }
 
@@ -83,7 +91,7 @@ button:hover {
 .container {
   max-width: 1024px;
   min-height: 100vh;
-  background: #f9f9f9;
+  background: var(--container-bg-color, white);
   margin: 0 auto;
 }
 /**
@@ -92,16 +100,14 @@ button:hover {
 
 .menu {
   height: 4em;
-  background-color: #677ae4;
-  background-color: #05526A;
-  background-color: #98201D;
+  background-color: var(--menu-bg-color, crimson);
   display: flex;
   justify-content: space-between;
 }
 
 .menu h1 {
   padding: 10px 0;
-  color: #f9f9f9;
+  color: var(--container-bg-color, white);
   font-size: 1.8em;
 }
 
@@ -114,7 +120,7 @@ button:hover {
   text-decoration: none;
   padding: 0 10px;
   margin: 5px;
-  color: #fff;
+  color: white;
   font-size: 15px;
   font-weight: bold;
 }
@@ -135,36 +141,17 @@ button:hover {
   left: -5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #240508;
+  background-color: var(--add-btn-color, brown);
   cursor: pointer;
   opacity: 1;
   outline: none;
 }
 
 .menu button:hover {
-  background-color: #111;
+  background-color: black;
   opacity: 1;
 }
 
-.menu .results {
-  display: none;
-  position: absolute;
-  width: 215px;
-  top: 54px;
-  left: 10px;
-  background-color: #f6f6f6;
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.results li {
-  list-style: none;
-  padding: 10px 15px;
-}
-
-.menu .results li:hover {
-  background: #f3f3f3;
-}
 /**
  * Content Area
  */
@@ -178,7 +165,7 @@ button:hover {
 
 .jumbo {
   padding: 50px;
-  background: #f6f6f6;
+  background: var(--jumbo-bg-color, lightgrey)
 }
 
 .jumbo-header {
@@ -187,7 +174,7 @@ button:hover {
 }
 
 .jumbo:hover {
-  background-color: #f3f3f3;
+  background-color: var(--main-bg-color, grey);
 }
 
 .jumbo h2 {
@@ -214,7 +201,7 @@ button:hover {
 
 .listing {
   margin-top: 15px;
-  background-color: #f6f6f6;
+  background-color: var(--main-bg-color, grey);
   padding: 15px 50px;
   min-height: 200px;
   display: flex;
@@ -223,7 +210,7 @@ button:hover {
 }
 
 .listing:hover {
-  background-color: #f3f3f3;
+  background-color: var(--main-bg-color, grey);
 }
 
 .listing img {
@@ -335,16 +322,6 @@ button:hover {
   padding-left: 30px;
 }
 
-.show-listing .owner {
-  margin-top: 10px;
-}
-
-.show-listing .rental-pic {
-  width: 100%;
-  height: initial;
-  position: static;
-}
-
 .show-listing .content .description {
   flex-grow: 2;
   display: flex;
@@ -367,36 +344,4 @@ form input {
   font-size: 15px;
   width: 300px;
   margin: 15px;
-}
-
-/**
- * Utilities
- */
-
-.light {
-  font-weight: 300;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.hidden {
-  display: none;
-}
-
-.relative {
-  position: relative;
-}
-
-.screen-reader{
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
 }
