@@ -1,23 +1,23 @@
 <div class="container">
-    <div class="row add-form">
-          <h1>Add new restaurant</h1>
-            <form {{action 'save' on="submit"}}>
-                {{input value=this.model.name placeholder="Name"}}
-                {{input value=this.model.address placeholder="Address (street, city)"}}
-                {{input value=this.model.hours placeholder="Hours"}}
-                {{input value=this.model.image placeholder="Image URL"}}
-                <h3>Menu</h3>
-                {{#each this.model.menu as |menuItem|}}
-                    {{input value=menuItem.pizzaName placeholder="Name"}}
-                    {{input value=menuItem.pizzaPrice placeholder="Price"}}
-                    {{input value=menuItem.pizzaIngredients placeholder="Ingredients"}}
-                    <hr>
-                {{/each}}
-                <button {{action "newPizza"}} class="add-new-pizza">New pizza</button>
-                <button type="submit">Add restaurant</button>
-            </form>
-            <a href="/restaurants">Go back</a>
-    </div>
+  <div class="row add-form">
+    <h1>Add new restaurant</h1>
+    <form {{action "save" on="submit"}}>
+      {{input value=this.model.name placeholder="Name"}}
+      {{input value=this.model.address placeholder="Address (street, city)"}}
+      {{input value=this.model.hours placeholder="Hours"}}
+      {{input value=this.model.image placeholder="Image URL"}}
+      <h3>Menu</h3>
+      {{#each this.model.menu as |menuItem|}}
+        {{input value=menuItem.pizzaName placeholder="Name"}}
+        {{input value=menuItem.pizzaPrice placeholder="Price"}}
+        {{input value=menuItem.pizzaIngredients placeholder="Ingredients"}}
+        <hr>
+      {{/each}}
+      <button {{action "newPizza"}} class="add-new-pizza">New pizza</button>
+      <button type="submit">Add restaurant</button>
+    </form>
+    <a href="/restaurants">Go back</a>
+  </div>
 </div>
 
 {{outlet}}
